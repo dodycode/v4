@@ -13,7 +13,8 @@ export default function Work() {
           return (
             <Link
               className="group"
-              href={experience.url as string}
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              href={experience.url}
               target="_blank"
               key={index}
             >
