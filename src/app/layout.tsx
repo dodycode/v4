@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { Exo } from "next/font/google";
 import { type Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
@@ -37,6 +38,7 @@ export default function RootLayout({
             {children}
           </main>
           <FloatingContactButton />
+          <NextTopLoader color="#fff" />
         </TRPCReactProvider>
       </body>
     </html>
