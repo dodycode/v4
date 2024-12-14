@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Sophiie AI",
+    "description": "AI virtual assistant that provides your business with an agent to answer inbound calls, connecting you with new leads in real-time.",
+    "date": "2024",
+    "url": "https://sophiie.ai/"
+  },
+  {
+    "name": "Primakara University Website",
+    "description": "Primakara University official website built with Astro JS and strapi for user content management.",
+    "date": "2023",
+    "url": "https://primakara.ac.id/"
+  },
+  {
+    "name": "Sourci Official Website",
+    "description": "Sourci Landing Page built with Gatsby JS and Prismic for user content management. I developed the Sourci website from scratch with Gatsby JS and managed to improve its performance compared to their old Wordpress website.",
+    "date": "2022",
+    "url": "https://www.sourci.com.au/"
+  },
+  {
+    "name": "SourciED Thinkific Course",
+    "description": "Sourci thinkific course, built from scratch with Thinkific and Shopify as template engine",
+    "date": "2022",
+    "url": "https://www.instagram.com/reel/Ckpdz_JPQt1/"
+  },
+  {
+    "name": "Omni Hotelier Booking Engine",
+    "description": "Omni Hotelier Booking Engine that built with Laravel PHP Framework and Vue JS as a frontend.",
+    "date": "2019",
+    "url": "https://omnihotelier.com/en/booking-engine/"
+  },
+  {
+    "name": "Bisloka Booking Website",
+    "description": "MVP of Bisloka Booking Website that I built from scratch with Laravel PHP Framework and JQuery",
+    "date": "2018",
+    "url": "https://instagram.com/bisloka/"
+  }
+]

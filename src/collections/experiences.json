@@ -1,0 +1,37 @@
+[
+  {
+    "dates": "Jun 2022 · Present",
+    "role": "Offshore Full Stack Developer",
+    "company": "VA For Everyone",
+    "description": "Working remotely as part of an international team from various clients, developing and maintaining web applications using AI, React, Node.js, and other modern technologies. Collaborating across time zones to deliver efficient and scalable solutions.",
+    "url": "https://vaforeveryone.com.au/"
+  },
+  {
+    "dates": "Jun 2022 · Present",
+    "role": "Full Stack Developer",
+    "company": "Upscalix",
+    "description": "Developing and maintaining web solutions such as creating an admin dashboard, refactoring existing code for better performance, and building a SSG landing page with Prismic CMS as a headless CMS. I'm also have the opportunity to build a Thinkific course site from scratch using the Shopify template engine. Implementing a complex features including a Google Drive-inspired file manager with drag-and-drop and copy-paste functionality.",
+    "url": "https://upscalix.com.au/"
+  },
+  {
+    "dates": "Dec 2019 · Apr 2022",
+    "role": "Full Stack Developer",
+    "company": "PT. Omni Hotelier International",
+    "description": "Developed and maintained the online booking engine system using Laravel PHP Framework. Focused on refactoring and optimizing back-end queries to improve system performance and efficiency.",
+    "url": "https://omnihotelier.com/en/home"
+  },
+  {
+    "dates": "Jan 2018 · Nov 2019",
+    "role": "Full Stack Developer",
+    "company": "Bisloka",
+    "description": "Responsible for completing the MVP version of the web app for bus and ELF rentals in Bali. Developed the application using Laravel PHP Framework, implementing features such as price comparison, payment methods, and customer support functionalities.",
+    "url": "https://www.instagram.com/bisloka/"
+  },
+  {
+    "dates": "Jul 2016 · Nov 2016",
+    "role": "Internship",
+    "company": "Avatar Solutions",
+    "description": "Participated in an internship program, focusing on the development of .NET Desktop Applications. Gained hands-on experience in software development processes and IT solutions for various industries.",
+    "url": "https://www.avatarsolution.com/"
+  }
+]
