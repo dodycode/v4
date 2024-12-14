@@ -19,7 +19,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
     <div className={cn("relative border-l pl-6", isLast && "border-l-0")}>
       <div className="absolute -left-1.5 h-3 w-3 rounded-full border bg-background" />
       <div className="-translate-y-[4.5px] space-y-2 pb-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-start lg:flex-row lg:items-center lg:justify-between">
           <h3 className="font-medium transition-colors group-hover:text-muted-foreground">
             {role}
           </h3>
