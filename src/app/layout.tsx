@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { Exo } from "next/font/google";
 import { type Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
@@ -40,6 +41,7 @@ export default function RootLayout({
           <FloatingContactButton />
           <NextTopLoader color="#fff" />
         </TRPCReactProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
