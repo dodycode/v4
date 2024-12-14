@@ -1,8 +1,10 @@
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
+import NextAvatar from "~/components/next-avatar";
 import BlurFade from "~/components/ui/blur-fade";
 import { LinkPreview } from "~/components/ui/link-preview";
+
+import DodyP from "./_assets/dodycode.jpeg";
 
 export default function Home() {
   return (
@@ -13,14 +15,17 @@ export default function Home() {
       </p>
 
       <div className="flex items-center">
-        <Avatar className="size-[100px]">
-          <AvatarImage
-            src="/assets/images/dodycode.jpeg"
-            alt="The nerd behind Dodycode"
-            className="object-cover object-left transition-colors"
-          />
-          <AvatarFallback>D</AvatarFallback>
-        </Avatar>
+        <NextAvatar
+          src={DodyP}
+          alt="Dody's photo profile"
+          width={100}
+          height={100}
+          style={{
+            objectFit: "cover",
+            objectPosition: "left",
+          }}
+          placeholder="blur"
+        />
 
         <div className="flex flex-col">
           <a
