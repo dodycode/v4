@@ -9,9 +9,11 @@ const FloatingContactButton: React.FC = () => {
   useEffect(() => {
     const toggleVisibility = () => {
       const scrolled = window.scrollY;
+      const pageHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
 
       // Show button when scrolled down, hide when at the top
-      if (scrolled > 0) {
+      if (scrolled > 0 && scrolled < pageHeight) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
