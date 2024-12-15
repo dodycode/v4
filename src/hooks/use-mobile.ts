@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 /// This is the same as tailwind's breakpoint `md`.
