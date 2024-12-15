@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={cn("dark", ExoFont.variable, GeistSans.variable)}
     >
-      <body className="relative mx-4 flex max-h-dvh min-h-[calc(100dvh-3rem)] flex-col pt-12 antialiased">
+      <body className="relative mx-4 flex max-h-dvh flex-col pt-12 antialiased">
         <TRPCReactProvider>
           <Navbar />
           <main className="mx-auto mt-12 flex-grow px-9 lg:min-w-[60ch] lg:max-w-[60ch] lg:px-0">
