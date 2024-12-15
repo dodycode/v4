@@ -13,15 +13,15 @@ const FloatingContactButton: React.FC = () => {
   const [_, windowHeight] = useWindowSize();
 
   useEffect(() => {
+    if (!windowHeight) return;
+
     const toggleVisibility = () => {
       const scrolled = window.scrollY;
-      const pageHeight = windowHeight ?? 0;
 
-      // Show button when scrolled down, hide when at the top and hide when at the bottom on mobile
-      if (scrolled > 0 && (isMobile ? scrolled + 43 < pageHeight : true)) {
+      // Show button when scrolled down
+      if (scrolled > 0) {
         setIsVisible(true);
-      } else {
-        setIsVisible(false);
+        setTimeout(() => setIsVisible(false), 3000);
       }
     };
 
@@ -29,7 +29,7 @@ const FloatingContactButton: React.FC = () => {
     toggleVisibility(); // Call it once to set initial state
 
     return () => window.removeEventListener("scroll", toggleVisibility);
-  }, [windowHeight, isMobile]);
+  }, [isMobile, windowHeight]);
 
   return (
     <AnimatePresence>

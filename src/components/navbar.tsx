@@ -7,7 +7,7 @@ const NavbarLinks = lazy(() =>
 
 const Navbar: React.FC = () => {
   return (
-    <header className="flex flex-col items-center gap-4">
+    <header className="flex flex-none flex-col items-center gap-4">
       <Suspense
         fallback={
           <div className="flex items-center">
