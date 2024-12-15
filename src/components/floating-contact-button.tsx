@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useIsMobile } from "~/hooks/use-mobile";
 
 const FloatingContactButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -12,8 +15,8 @@ const FloatingContactButton: React.FC = () => {
       const pageHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
-      // Show button when scrolled down, hide when at the top
-      if (scrolled > 0 && scrolled < pageHeight) {
+      // Show button when scrolled down, hide when at the top and hide when at the bottom on mobile
+      if (scrolled > 0 && (isMobile ? scrolled < pageHeight : true)) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -24,7 +27,7 @@ const FloatingContactButton: React.FC = () => {
     toggleVisibility(); // Call it once to set initial state
 
     return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+  }, [isMobile]);
 
   return (
     <AnimatePresence>
