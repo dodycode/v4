@@ -10,7 +10,7 @@ export default function Work() {
       {projects.map((project, index) => (
         <div key={index} className="group">
           <Link href={project.url} target="_blank" className="block space-y-2">
-            <h2 className="group-hover:text-muted-foreground font-medium transition-colors">
+            <h2 className="font-medium transition-colors group-hover:text-muted-foreground">
               {project.name}{" "}
               <div className="group:hover:bg-muted-foreground inline-block size-1 -translate-y-0.5 rounded-full bg-white" />{" "}
               {project.date}
