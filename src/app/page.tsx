@@ -25,6 +25,7 @@ export default function Home() {
             objectPosition: "left",
           }}
           placeholder="blur"
+          priority={true}
         />
 
         <div className="flex flex-col">
