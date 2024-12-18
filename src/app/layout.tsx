@@ -1,12 +1,12 @@
 import "~/styles/globals.css";
 
+import NextTopLoader from "nextjs-toploader";
 import { GeistSans } from "geist/font/sans";
 import { Exo } from "next/font/google";
 import { type Metadata } from "next";
-import NextTopLoader from "nextjs-toploader";
+
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 import { Navbar } from "~/components/navbar";
 import FloatingContactButton from "~/components/floating-contact-button";
@@ -33,14 +33,12 @@ export default function RootLayout({
       className={cn("dark", ExoFont.variable, GeistSans.variable)}
     >
       <body className="relative mx-4 flex max-h-dvh flex-col pt-12 antialiased">
-        <TRPCReactProvider>
-          <Navbar />
-          <main className="mx-auto mt-12 flex-grow px-9 lg:min-w-[60ch] lg:max-w-[60ch] lg:px-0">
-            {children}
-          </main>
-          <FloatingContactButton />
-          <NextTopLoader color="#fff" />
-        </TRPCReactProvider>
+        <Navbar />
+        <main className="mx-auto mt-12 flex-grow px-9 lg:min-w-[60ch] lg:max-w-[60ch] lg:px-0">
+          {children}
+        </main>
+        <FloatingContactButton />
+        <NextTopLoader color="#fff" />
         <SpeedInsights />
       </body>
     </html>
