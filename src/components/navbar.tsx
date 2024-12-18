@@ -1,8 +1,13 @@
-import { lazy, Suspense } from "react";
+"use client";
+
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+
 import { Skeleton } from "./ui/skeleton";
 
-const NavbarLinks = lazy(() =>
-  import("./navbar-links").then((mod) => ({ default: mod.NavbarLinks })),
+const NavbarLinks = dynamic(
+  () => import("./navbar-links").then((mod) => mod.NavbarLinks),
+  { ssr: false },
 );
 
 const Navbar: React.FC = () => {
