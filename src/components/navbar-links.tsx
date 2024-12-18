@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRouter } from "nextjs-toploader/app";
 import { motion } from "motion/react";
 
 import { cn } from "~/lib/utils";
+import { useEffect, useState } from "react";
 
 type NavLink = {
   href: string;
@@ -20,20 +20,10 @@ const links: NavLink[] = [
 
 export function NavbarLinks() {
   const pathname = usePathname();
-  const router = useRouter();
 
   const [active, setActive] = useState<NavLink | undefined>(
     links.find((link) => link.href === pathname) ?? links[0],
   );
-
-  const moveSelectedLinkToTop = (idx: number) => {
-    const newLinks = [...links];
-    const selectedLink = newLinks.splice(idx, 1);
-    if (!selectedLink[0]) return;
-    newLinks.unshift(selectedLink[0]);
-    if (!newLinks[0]) return;
-    router.push(newLinks[0].href);
-  };
 
   useEffect(() => {
     setActive(links.find((link) => link.href === pathname) ?? links[0]);
@@ -41,12 +31,10 @@ export function NavbarLinks() {
 
   return (
     <div className="relative flex items-center justify-start">
-      {links?.map((link, idx) => (
-        <button
+      {links.map((link) => (
+        <Link
           key={link.label}
-          onClick={() => {
-            moveSelectedLinkToTop(idx);
-          }}
+          href={link.href}
           className="group relative rounded-md px-2 py-1"
           style={{
             transformStyle: "preserve-3d",
@@ -67,7 +55,7 @@ export function NavbarLinks() {
           >
             {link.label}
           </span>
-        </button>
+        </Link>
       ))}
     </div>
   );

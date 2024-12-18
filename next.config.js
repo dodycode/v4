@@ -22,6 +22,10 @@ const config = {
       "nextjs-toploader",
       "nextjs-toploader/app",
     ],
+    staleTimes: {
+      dynamic: 30,
+      static: 180,
+    },
   },
 };
 
