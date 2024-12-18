@@ -16,6 +16,13 @@ const config = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: [
+      "motion/react",
+      "nextjs-toploader",
+      "nextjs-toploader/app",
+    ],
+  },
 };
 
 export default config;
