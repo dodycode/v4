@@ -3,6 +3,9 @@ import Link from "next/link";
 import NextAvatar from "~/components/next-avatar";
 import BlurFade from "~/components/ui/blur-fade";
 import { LinkPreview } from "~/components/ui/link-preview";
+import { env } from "~/env";
+
+const baseUrl = env.BASE_URL;
 
 export default function Home() {
   return (
@@ -15,7 +18,7 @@ export default function Home() {
       <div className="flex items-center">
         <NextAvatar
           className="object-cover object-left"
-          src="/assets/images/dodycode.jpeg"
+          src={`${baseUrl}/assets/images/dodycode.jpeg`}
           alt="Dody's photo profile"
           width={100}
           height={100}
