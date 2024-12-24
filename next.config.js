@@ -21,10 +21,11 @@ const config = {
       "motion/react",
       "nextjs-toploader",
       "nextjs-toploader/app",
+      "next-cloudinary",
     ],
     staleTimes: {
-      dynamic: 30,
-      static: 180,
+      // 1 month
+      static: 2628000,
     },
   },
 };
