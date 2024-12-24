@@ -4,8 +4,6 @@ import NextAvatar from "~/components/next-avatar";
 import BlurFade from "~/components/ui/blur-fade";
 import { LinkPreview } from "~/components/ui/link-preview";
 
-import DodyP from "./_assets/dodycode.jpeg";
-
 export default function Home() {
   return (
     <BlurFade className="flex flex-col gap-6">
@@ -16,20 +14,16 @@ export default function Home() {
 
       <div className="flex items-center">
         <NextAvatar
-          src={DodyP}
+          className="object-cover object-left"
+          src="/assets/images/dodycode.jpeg"
           alt="Dody's photo profile"
           width={100}
           height={100}
-          style={{
-            objectFit: "cover",
-            objectPosition: "left",
-          }}
-          placeholder="blur"
           priority={true}
         />
 
         <div className="flex flex-col">
-          <a
+          <Link
             href="https://www.linkedin.com/in/dodycode/"
             target="_blank"
             rel="noopener noreferrer"
@@ -37,8 +31,8 @@ export default function Home() {
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">Linkedin</span>
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/dodycode"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +40,7 @@ export default function Home() {
           >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
-          </a>
+          </Link>
         </div>
       </div>
 
