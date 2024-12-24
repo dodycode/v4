@@ -24,6 +24,11 @@ jobs:
       - name: Setup
         uses: ./.github/workflows/setup
 
+      - name: Create .env file
+        run: |
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}" >> .env
+
       - name: Check
         run: pnpm check
 
@@ -34,6 +39,11 @@ jobs:
 
       - name: Setup
         uses: ./.github/workflows/setup
+
+      - name: Create .env file
+        run: |
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}" >> .env
 
       - name: Typecheck
         env:
