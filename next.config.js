@@ -23,10 +23,7 @@ const config = {
       "nextjs-toploader/app",
       "next-cloudinary",
     ],
-    staleTimes: {
-      // 1 month
-      static: 2628000,
-    },
+    reactCompiler: true,
   },
 };
 

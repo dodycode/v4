@@ -1,44 +1,49 @@
 "use client";
 
-import { getCldImageUrl, type CldImageProps } from "next-cloudinary";
+import { CldImage, type CldImageProps } from "next-cloudinary";
 import { useState } from "react";
-import { Avatar, AvatarImage } from "~/components/ui/avatar";
+import { Avatar } from "~/components/ui/avatar";
 import { cn } from "~/lib/utils";
+import { Skeleton } from "./ui/skeleton";
 
-type Props = CldImageProps;
+type Props = CldImageProps & {
+  className?: string;
+};
 
 export default function NextAvatar(props: Props) {
   const [isLoading, setIsLoading] = useState(true);
-
-  const src = getCldImageUrl({
-    width: props.width,
-    height: props.height,
-    deliveryType: "fetch",
-    ...props,
-  });
+  const { width, height, className, alt, ...rest } = props;
 
   return (
-    <Avatar
-      className={props.className}
-      style={{
-        width: props.width,
-        height: props.height,
-      }}
-    >
-      <AvatarImage
-        src={src}
+    <div className="relative" style={{ width, height }}>
+      {/* Loading Skeleton */}
+      <Skeleton
         className={cn(
-          "h-full w-full object-cover",
-          "transition-opacity duration-300 ease-in-out",
+          "absolute inset-0 rounded-full",
+          className,
+          !isLoading && "hidden",
         )}
-        style={{
-          opacity: isLoading ? 0 : 1,
-        }}
-        alt={props.alt}
-        onLoad={() => {
-          setIsLoading(false);
-        }}
       />
-    </Avatar>
+
+      {/* Cloudinary Image */}
+      <Avatar className={className} style={{ width, height }}>
+        <CldImage
+          {...rest}
+          width={width}
+          height={height}
+          alt={alt || "Avatar"}
+          className={cn(
+            "h-full w-full rounded-full object-cover",
+            "transition-opacity duration-300",
+            isLoading ? "opacity-0" : "opacity-100",
+          )}
+          onLoad={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
+          priority={true}
+          deliveryType="fetch"
+          format="webp"
+        />
+      </Avatar>
+    </div>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import { NavbarLinks } from "./navbar-links";
 
 const Navbar: React.FC = () => {
