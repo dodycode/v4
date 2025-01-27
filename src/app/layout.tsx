@@ -34,11 +34,11 @@ export default function RootLayout({
     >
       <body className="relative mx-4 flex max-h-dvh flex-col pt-12 antialiased">
         <Navbar />
-        <main className="mx-auto mt-12 flex-grow px-9 lg:min-w-[60ch] lg:max-w-[60ch] lg:px-0">
+        <main className="mx-auto mt-12 grow px-9 lg:max-w-[60ch] lg:min-w-[60ch] lg:px-0">
           {children}
         </main>
         <FloatingContactButton />
-        <NextTopLoader color="#fff" />
+        <NextTopLoader color="#fff" showSpinner={false} />
         <SpeedInsights />
       </body>
     </html>

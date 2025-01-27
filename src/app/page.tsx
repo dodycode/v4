@@ -22,7 +22,6 @@ export default function Home() {
           alt="Dody's photo profile"
           width={100}
           height={100}
-          priority={true}
         />
 
         <div className="flex flex-col">
@@ -30,7 +29,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/dodycode/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 transition-colors hover:text-muted-foreground"
+            className="hover:text-muted-foreground p-2 transition-colors"
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">Linkedin</span>
@@ -39,7 +38,7 @@ export default function Home() {
             href="https://github.com/dodycode"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 transition-colors hover:text-muted-foreground"
+            className="hover:text-muted-foreground p-2 transition-colors"
           >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
@@ -51,7 +50,7 @@ export default function Home() {
         Currently working as an offshore developer at{" "}
         <LinkPreview
           url="https://vaforeveryone.com.au"
-          className="font-semibold transition-colors hover:text-muted-foreground"
+          className="hover:text-muted-foreground font-semibold transition-colors"
           imageSrc="/assets/images/experiences/vafe.png"
           isStatic
         >
