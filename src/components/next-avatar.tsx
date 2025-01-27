@@ -41,6 +41,7 @@ export default function NextAvatar(props: Props) {
           onError={() => setIsLoading(false)}
           priority={true}
           deliveryType="fetch"
+          format="webp"
         />
       </Avatar>
     </div>
