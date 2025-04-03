@@ -1,17 +1,10 @@
 [
   {
     "dates": "Jun 2022 · Present",
-    "role": "Offshore Full Stack Developer",
-    "company": "VA For Everyone",
-    "description": "Working remotely as part of an international team from various clients, developed and maintained web applications using AI, React, Node.js, and other modern technologies. Collaborating across time zones to deliver efficient and scalable solutions.",
-    "url": "https://vaforeveryone.com.au/"
-  },
-  {
-    "dates": "Jun 2022 · Present",
     "role": "Full Stack Developer",
-    "company": "Upscalix",
-    "description": "Developed and maintained web solutions, including refactoring existing code for better performance, building a static site generator (SSG) landing page, and integrating it with a headless CMS. I'm also managed to built a Thinkific course site from scratch using the Shopify template engine. Implemented a complex features including a Google Drive-inspired file manager with drag-and-drop and copy-paste functionality.",
-    "url": "https://upscalix.com.au/"
+    "company": "Surya Digital Technology",
+    "description": "Collaborated with international teams to deliver scalable solutions. Developed a Google Drive-inspired file manager with drag-and-drop functionality and improved website performance by 40% through code refactoring. Built a Thinkific course site using the Shopify template engine. Integrated AI-powered features using OpenAI SDK, including intelligent email composition and auto-reply messaging systems, with custom prompts designed from scratch. Structured and managed a large-scale monorepo project using Turborepo and implemented tRPC for type-safe API calls, enhancing productivity and reducing bugs.",
+    "url": "https://suryadt.co.id"
   },
   {
     "dates": "Dec 2019 · Apr 2022",
