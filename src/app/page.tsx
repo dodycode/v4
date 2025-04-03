@@ -12,7 +12,7 @@ export default function Home() {
     <BlurFade className="flex flex-col gap-6">
       <h1 className="font-exo text-3xl font-bold">Hey, I&apos;m Dody</h1>
       <p className="text-base leading-relaxed">
-        Fullstack JavaScript Developer who loves building web applications.{" "}
+        Fullstack Developer who loves building web applications.{" "}
       </p>
 
       <div className="flex items-center">
