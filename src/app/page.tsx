@@ -75,7 +75,7 @@ export default function Home() {
         >
           VA For Everyone
         </LinkPreview>{" "}
-        's global client base to design and implement innovative solutions.
+        global client base to design and implement innovative solutions.
       </div>
 
       <p className="text-sm text-neutral-700">
