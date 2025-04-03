@@ -54,7 +54,7 @@ export default function Home() {
         >
           Surya Digital Technology
         </LinkPreview>{" "}
-        where I am hired as an offshore developer for one of their clients,{" "}
+        where I am hired as an offshore developer for{" "}
         <LinkPreview
           url="https://vaforeveryone.com.au/"
           className="hover:text-muted-foreground font-semibold transition-colors"
@@ -66,17 +66,8 @@ export default function Home() {
       </div>
 
       <div className="text-base leading-relaxed">
-        I collaborate with international teams at{" "}
-        <LinkPreview
-          url="https://vaforeveryone.com.au/"
-          className="hover:text-muted-foreground font-semibold transition-colors"
-          imageSrc="/assets/images/experiences/vafe.png"
-          isStatic
-        >
-          VA For Everyone
-        </LinkPreview>{" "}
-        to design and implement innovative solutions that meet client needs and
-        drive business growth.
+        I collaborate with international teams from their global client base to
+        design and implement innovative solutions.
       </div>
 
       <p className="text-sm text-neutral-700">
