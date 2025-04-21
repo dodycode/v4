@@ -47,14 +47,20 @@ export default function Home() {
       </div>
 
       <div className="text-base leading-relaxed">
-        Currently working as a Fullstack developer at{" "}
+      Currently, I work at{" "}
         <LinkPreview
           url="https://suryadt.co.id/"
           className="hover:text-muted-foreground font-semibold transition-colors"
         >
           Surya Digital Technology
         </LinkPreview>{" "}
-        , I am hired as an offshore developer for their client,{" "}
+        as an outsourced talent, contributing to projects for clients such as,{" "}
+        <LinkPreview
+          url="https://upscalix.com.au/"
+          className="hover:text-muted-foreground font-semibold transition-colors"
+        >
+          Upscalix
+        </LinkPreview>{" "} and {" "}
         <LinkPreview
           url="https://vaforeveryone.com.au/"
           className="hover:text-muted-foreground font-semibold transition-colors"
@@ -62,20 +68,13 @@ export default function Home() {
           isStatic
         >
           VA For Everyone
-        </LinkPreview>{" "}
+        </LinkPreview>.
       </div>
 
+      <div className="text-base leading-relaxed">I collaborate with international teams to design and implement innovative solutions that drive business success.</div>
+
       <div className="text-base leading-relaxed">
-        I collaborate with international teams from{" "}
-        <LinkPreview
-          url="https://vaforeveryone.com.au/"
-          className="hover:text-muted-foreground font-semibold transition-colors"
-          imageSrc="/assets/images/experiences/vafe.png"
-          isStatic
-        >
-          VA For Everyone
-        </LinkPreview>{" "}
-        global client base to design and implement innovative solutions.
+        Let’s build something great together.
       </div>
 
       <p className="text-sm text-neutral-700">
