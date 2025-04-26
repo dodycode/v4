@@ -9,12 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://dodycode.com/experience",
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.8,
-    },
-    {
       url: "https://dodycode.com/work",
       lastModified: new Date(),
       changeFrequency: "monthly",

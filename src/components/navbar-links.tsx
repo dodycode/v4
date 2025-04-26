@@ -14,7 +14,7 @@ type NavLink = {
 
 const links: NavLink[] = [
   { href: "/", label: "home" },
-  { href: "/experience", label: "experience" },
+  { href: "https://www.linkedin.com/in/dodycode/", label: "experience" },
   { href: "/work", label: "work" },
 ];
 
@@ -39,6 +39,7 @@ export function NavbarLinks() {
           style={{
             transformStyle: "preserve-3d",
           }}
+          target={link.href.startsWith("http") ? "_blank" : undefined}
         >
           {active?.href === link.href && (
             <motion.div
