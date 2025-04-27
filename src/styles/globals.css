@@ -1,12 +1,13 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-exo: var(--font-exo);
 
   --radius-lg: var(--radius);
@@ -123,7 +124,7 @@
   }
 
   * {
-    @apply box-border border-border;
+    @apply border-border box-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -144,4 +145,81 @@
     0px 10px 6px 0px rgba(19, 21, 26, 0.15),
     0px 17px 7px 0px rgba(19, 21, 26, 0.04),
     0px 26px 7px 0px rgba(19, 21, 26, 0.01);
+}
+
+#sun,
+#moon {
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    text-decoration-color,
+    fill,
+    stroke,
+    opacity,
+    box-shadow,
+    transform,
+    filter,
+    backdrop-filter,
+    -webkit-backdrop-filter;
+
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition-duration: 0.7s;
+
+  transform: translate3d(0, 0, 0);
+}
+
+#darkToggle {
+  transition: all 0.3s ease-in-out;
+}
+
+/* TODO: Fix this */
+/* 
+#darkToggle:hover #sun,
+#darkToggle:hover #moon {
+  transform: translate3d(0, 10px, 0);
+} */
+
+html.dark #darkToggle:hover .horizon {
+  border-color: #718096 !important;
+}
+
+.horizon .setting {
+  animation: 1s ease 0s 1 setting;
+}
+
+.horizon .rising {
+  animation: 1s ease 0s 1 rising;
+}
+
+@keyframes setting {
+  0% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40% {
+    transform: translate3d(0, -2px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 30px, 0);
+  }
+}
+
+@keyframes rising {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translate3d(0, -2px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }

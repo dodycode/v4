@@ -2,26 +2,21 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { useIsMobile } from "~/hooks/use-mobile";
-import useWindowSize from "~/hooks/use-window-size";
 
 const FloatingContactButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const isMobile = useIsMobile();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [_, windowHeight] = useWindowSize();
-
   useEffect(() => {
-    if (!windowHeight) return;
-
     const toggleVisibility = () => {
       const scrolled = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
 
-      // Show button when scrolled down
-      if (scrolled > 0) {
+      // Show button when scrolled down, hide when at the top or bottom
+      if (scrolled > 300 && scrolled + viewportHeight < fullHeight - 50) {
         setIsVisible(true);
-        setTimeout(() => setIsVisible(false), 3000);
+      } else {
+        setIsVisible(false);
       }
     };
 
@@ -29,7 +24,7 @@ const FloatingContactButton: React.FC = () => {
     toggleVisibility(); // Call it once to set initial state
 
     return () => window.removeEventListener("scroll", toggleVisibility);
-  }, [isMobile, windowHeight]);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -39,14 +34,14 @@ const FloatingContactButton: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-0 right-5 z-50 flex items-center justify-center pb-7"
+          className="fixed right-5 bottom-0 z-50 flex items-center justify-center pb-7"
         >
           <a
             href="mailto:prasetyodody17@gmail.com"
             className="group/contact-me-btn custom-contact-btn relative flex items-center justify-center overflow-hidden p-4 text-center text-white"
           >
             <span className="-translate-y-[2px] text-center transition duration-500 group-hover/contact-me-btn:translate-x-40">
-              Let&apos;s Get in Touch !
+              Let's Get in Touch !
             </span>
             <div className="absolute inset-0 z-20 flex -translate-x-40 items-center justify-center text-white transition duration-500 group-hover/contact-me-btn:translate-x-0">
               <svg

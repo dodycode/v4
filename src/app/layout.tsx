@@ -4,12 +4,13 @@ import NextTopLoader from "nextjs-toploader";
 import { GeistSans } from "geist/font/sans";
 import { Exo } from "next/font/google";
 import { type Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { cn } from "~/lib/utils";
-import { Navbar } from "~/components/navbar";
 import FloatingContactButton from "~/components/floating-contact-button";
+import { Header } from "~/components/header";
 
 export const metadata: Metadata = {
   title: "Dodycode's Digital Space",
@@ -31,15 +32,16 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn("dark", ExoFont.variable, GeistSans.variable)}
+      suppressHydrationWarning
     >
-      <body className="relative mx-4 flex max-h-dvh flex-col pt-12 antialiased">
-        <Navbar />
-        <main className="mx-auto mt-12 grow px-9 lg:max-w-[60ch] lg:min-w-[60ch] lg:px-0">
+      <body className="relative flex flex-col antialiased">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Header />
           {children}
-        </main>
-        <FloatingContactButton />
-        <NextTopLoader color="#fff" showSpinner={false} />
-        <SpeedInsights />
+          <FloatingContactButton />
+          <NextTopLoader color="#fff" showSpinner={false} />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );
